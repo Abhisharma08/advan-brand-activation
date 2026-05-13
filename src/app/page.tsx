@@ -222,7 +222,7 @@ export default function LandingPage() {
                 { icon: <Lightbulb />, title: "In-Shop Branding", desc: "Unique brand experiences from wall graphics to display units." },
                 { icon: <PanelsTopLeft />, title: "Store Layout & Space Design", desc: "Layouts that mesmerise customers and drive long-term profitability." },
                 { icon: <Signpost />, title: "Navigation & Wayfinding Signages", desc: "Signages that guide customers and impact their purchase decisions." },
-                { icon: <ShoppingBag />, title: "Visual Merchandising", desc: "Merchandising strategies that bring customers in and back again. structure, hierarchy, readability, and composition." },
+                { icon: <ShoppingBag />, title: "Visual Merchandising", desc: "Merchandising strategies that bring customers in and back again." },
                 { icon: <Sofa />, title: "Retail Store Interior Designing", desc: "Interiors that build the right atmosphere around your brand" },
                 { icon: <Hammer />, title: "Materials & Fabrications", desc: "Budget-friendly materials that forge deeper customer brand connections." },
                 { icon: <Megaphone />, title: "Outdoor Advertising", desc: "High-footfall placements that put your brand where it matters." },
@@ -351,7 +351,7 @@ export default function LandingPage() {
       <div className="fixed bottom-0 left-0 right-0 z-30 flex w-screen gap-2 border-t bg-white p-4 shadow-[0_-4px_10px_rgba(0,0,0,0.1)] lg:hidden">
         <div className="mx-auto flex w-full max-w-7xl gap-2 px-4">
           <ScrollToLeadButton className="h-12 flex-1 bg-secondary font-bold text-white">
-            Apply Now
+            Enquire Now!
           </ScrollToLeadButton>
         </div>
       </div>
