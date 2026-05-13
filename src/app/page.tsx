@@ -110,7 +110,7 @@ export default function LandingPage() {
                   ))}
                 </div>
                 <p className="text-lg italic text-secondary">
-                  ENQUIRE NOW!
+                  BOOK A FREE CONSULTATION
                 </p>
               </div>
               <div id="lead-form-top">
@@ -254,7 +254,7 @@ export default function LandingPage() {
                 <>
                   No matter where your brand stands today, the outcome is the same:{" "}
                   <span className="font-semibold text-secondary">stronger presence</span>,{" "}
-                  <span className="font-semibold text-secondary">better recall</span>, and{" "}
+                  <span className="font-semibold text-secondary">better recall</span>,{" "}
                   <span className="font-semibold text-secondary">more customers.</span>
                 </>   
               }           light

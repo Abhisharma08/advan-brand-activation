@@ -12,7 +12,6 @@ type FormValues = {
   phone: string
   city: string
   lead_source: string
-  courseInterest: string
 }
 
 type FormErrors = Partial<Record<keyof FormValues, string>> & {
@@ -25,7 +24,6 @@ const defaultValues: FormValues = {
   phone: "",
   city: "",
   lead_source: "Graphic Landing Page",
-  courseInterest: "",
 }
 
 function validateForm(values: FormValues) {
@@ -48,10 +46,6 @@ function validateForm(values: FormValues) {
     errors.city = "Please enter your city."
   }
 
-  if (!values.courseInterest) {
-    errors.courseInterest = "Please select a course."
-  }
-
   return errors
 }
 
@@ -59,9 +53,12 @@ export default function LeadForm({ className }: { className?: string }) {
   const [values, setValues] = useState<FormValues>(defaultValues)
   const [errors, setErrors] = useState<FormErrors>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
+
   const router = useRouter()
 
-  function handleChange(event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
+  function handleChange(
+    event: React.ChangeEvent<HTMLInputElement>
+  ) {
     const { name, value } = event.target
 
     setValues((current) => ({
@@ -82,10 +79,13 @@ export default function LeadForm({ className }: { className?: string }) {
     })
   }
 
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(
+    event: React.FormEvent<HTMLFormElement>
+  ) {
     event.preventDefault()
 
     const validationErrors = validateForm(values)
+
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors)
       return
@@ -104,23 +104,49 @@ export default function LeadForm({ className }: { className?: string }) {
       router.push("/thank-you")
     } catch (error) {
       console.error("Submission Exception:", error)
+
       setErrors({
-        submit: "We encountered a problem. Please try again or contact us directly.",
+        submit:
+          "We encountered a problem. Please try again or contact us directly.",
       })
+
       setIsSubmitting(false)
     }
   }
 
   return (
-    <div className={`rounded-xl border border-muted bg-white p-6 shadow-2xl md:p-8 ${className}`}>
-      <h3 className="mb-2 text-2xl font-headline text-primary">Begin Your Interior Design Journey</h3>
-      <p className="mb-6 text-sm text-muted-foreground">Our counsellor will reach out shortly. No spam, only career guidance.</p>
+    <div
+      className={`rounded-xl border border-muted bg-white p-6 shadow-2xl md:p-8 ${className}`}
+    >
+      <h3 className="mb-2 text-2xl font-headline text-primary">
+        Get A Free Retail Branding Consultation
+      </h3>
 
-      <form onSubmit={handleSubmit} className="space-y-4" noValidate>
-        <input type="hidden" name="lead_source" value={values.lead_source} />
+      <p className="mb-6 text-sm text-muted-foreground">
+        Our experts will contact you shortly with tailored retail branding
+        solutions.
+      </p>
 
+      <form
+        onSubmit={handleSubmit}
+        className="space-y-4"
+        noValidate
+      >
+        <input
+          type="hidden"
+          name="lead_source"
+          value={values.lead_source}
+        />
+
+        {/* Name */}
         <div className="space-y-1.5">
-          <label htmlFor="name" className="text-sm font-medium text-foreground">Full Name</label>
+          <label
+            htmlFor="name"
+            className="text-sm font-medium text-foreground"
+          >
+            Full Name
+          </label>
+
           <input
             id="name"
             name="name"
@@ -128,29 +154,26 @@ export default function LeadForm({ className }: { className?: string }) {
             onChange={handleChange}
             placeholder="Your Name"
             autoComplete="name"
-            className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            className="flex h-11 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           />
-          {errors.name ? <p className="text-sm text-destructive">{errors.name}</p> : null}
+
+          {errors.name ? (
+            <p className="text-sm text-destructive">
+              {errors.name}
+            </p>
+          ) : null}
         </div>
 
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+        {/* Phone + Email */}
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <div className="space-y-1.5">
-            <label htmlFor="email" className="text-sm font-medium text-foreground">Email Address</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              value={values.email}
-              onChange={handleChange}
-              placeholder="Your Email"
-              autoComplete="email"
-              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-            />
-            {errors.email ? <p className="text-sm text-destructive">{errors.email}</p> : null}
-          </div>
+            <label
+              htmlFor="phone"
+              className="text-sm font-medium text-foreground"
+            >
+              Phone Number
+            </label>
 
-          <div className="space-y-1.5">
-            <label htmlFor="phone" className="text-sm font-medium text-foreground">Phone Number</label>
             <input
               id="phone"
               name="phone"
@@ -159,43 +182,67 @@ export default function LeadForm({ className }: { className?: string }) {
               placeholder="Your Phone Number"
               autoComplete="tel"
               inputMode="numeric"
-              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              className="flex h-11 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             />
-            {errors.phone ? <p className="text-sm text-destructive">{errors.phone}</p> : null}
+
+            {errors.phone ? (
+              <p className="text-sm text-destructive">
+                {errors.phone}
+              </p>
+            ) : null}
           </div>
 
           <div className="space-y-1.5">
-            <label htmlFor="city" className="text-sm font-medium text-foreground">City</label>
+            <label
+              htmlFor="email"
+              className="text-sm font-medium text-foreground"
+            >
+              Email Address
+            </label>
+
             <input
-              id="city"
-              name="city"
-              value={values.city}
+              id="email"
+              name="email"
+              type="email"
+              value={values.email}
               onChange={handleChange}
-              placeholder="Your City"
-              autoComplete="address-level2"
-              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              placeholder="Your Email"
+              autoComplete="email"
+              className="flex h-11 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             />
-            {errors.city ? <p className="text-sm text-destructive">{errors.city}</p> : null}
+
+            {errors.email ? (
+              <p className="text-sm text-destructive">
+                {errors.email}
+              </p>
+            ) : null}
           </div>
         </div>
 
+        {/* City */}
         <div className="space-y-1.5">
-          <label htmlFor="courseInterest" className="text-sm font-medium text-foreground">Interested Interior Design Program</label>
-          <select
-            id="courseInterest"
-            name="courseInterest"
-            value={values.courseInterest}
-            onChange={handleChange}
-            className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+          <label
+            htmlFor="city"
+            className="text-sm font-medium text-foreground"
           >
-            <option value="">Select a program</option>
-            <option value="undergraduate">Under Graduate Program</option>
-            <option value="postgraduate">Post Graduate Program</option>
-            <option value="advanced-diploma">Advanced Diploma</option>
-            <option value="diploma">Diploma</option>
-            <option value="short-term">Short Term Course</option>
-          </select>
-          {errors.courseInterest ? <p className="text-sm text-destructive">{errors.courseInterest}</p> : null}
+            City
+          </label>
+
+          <input
+            id="city"
+            name="city"
+            value={values.city}
+            onChange={handleChange}
+            placeholder="Your City"
+            autoComplete="address-level2"
+            className="flex h-11 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+          />
+
+          {errors.city ? (
+            <p className="text-sm text-destructive">
+              {errors.city}
+            </p>
+          ) : null}
         </div>
 
         {errors.submit ? (
@@ -206,7 +253,7 @@ export default function LeadForm({ className }: { className?: string }) {
 
         <Button
           type="submit"
-          className="min-h-14 h-14 w-full bg-secondary text-lg font-bold text-white hover:bg-secondary/90"
+          className="h-14 w-full bg-secondary text-lg font-bold text-white hover:bg-secondary/90"
           disabled={isSubmitting}
         >
           {isSubmitting ? (
@@ -218,10 +265,6 @@ export default function LeadForm({ className }: { className?: string }) {
             "Submit"
           )}
         </Button>
-
-        <p className="text-center text-[10px] uppercase tracking-wider text-muted-foreground">
-          Limited Seats for the Next Batch
-        </p>
       </form>
     </div>
   )
