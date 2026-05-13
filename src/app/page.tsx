@@ -9,7 +9,7 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Build from "next/dist/build";
 
 const LOGO_URL = "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1778668639/advlogo_qq9f92.png";
-const HERO_BG_URL = "https://res.cloudinary.com/ddqqlfsjp/image/upload/v1774679097/P1510960_1_1_1_wrknkg.jpg";
+const HERO_BG_URL = "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1778674606/hero_qkgfwb.webp";
 const DEFAULT_PLACEHOLDER = "https://picsum.photos/seed/placeholder/800/600";
 
 export default function LandingPage() {
@@ -36,14 +36,8 @@ export default function LandingPage() {
             />
           </div>
           <div className="flex items-center gap-4">
-            <ScrollToLeadButton
-              variant="ghost"
-              className="hidden font-semibold text-primary md:inline-flex"
-            >
-              ENQUIRE NOW!
-            </ScrollToLeadButton>
             <ScrollToLeadButton className="bg-secondary px-6 font-bold text-white hover:bg-secondary/90">
-              Apply Now
+              ENQUIRE NOW!
             </ScrollToLeadButton>
           </div>
         </div>
@@ -345,7 +339,7 @@ export default function LandingPage() {
 
       <footer className="w-full bg-primary pb-28 pt-8 text-white lg:py-8">
         <div className="container mx-auto max-w-7xl px-4 text-center text-xs text-white/60">
-          <p>&copy; {new Date().getFullYear()} International School of Design (INSD) Delhi. All Rights Reserved.</p>
+          <p>©2026 AD Vantage Integrated Marketing All Rights Reserved.</p>
         </div>
       </footer>
 
