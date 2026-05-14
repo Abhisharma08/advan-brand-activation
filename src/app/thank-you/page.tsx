@@ -3,7 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { CheckCircle2, ArrowLeft } from "lucide-react"
 
-const LOGO_URL = "https://res.cloudinary.com/ddqqlfsjp/image/upload/v1773820493/Final-Logo_exeo3n.png";
+const LOGO_URL = "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1778668639/advlogo_qq9f92.png";
 
 export default function ThankYouPage() {
   return (
@@ -33,16 +33,16 @@ export default function ThankYouPage() {
           </div>
           
           <div className="space-y-4">
-            <h1 className="text-3xl md:text-4xl font-headline text-primary">Application Received!</h1>
+            <h1 className="text-3xl md:text-4xl font-headline text-primary">Your query has been received.</h1>
             <p className="text-lg text-muted-foreground">
-              Thank you for your interest in INSD. Your details have been successfully submitted to our admissions team.
+              Thank you for your interest. Your details have been successfully submitted to our admissions team.
             </p>
           </div>
 
           <div className="bg-primary/5 p-6 rounded-xl border border-primary/10 space-y-4">
             <p className="font-medium text-primary">What happens next?</p>
             <p className="text-sm text-muted-foreground">
-              Our expert career counsellor will call you within the next 24 hours to discuss your creative goals and guide you through the next steps.
+              Our Team will call you within the next 24 hours to discuss your creative goals and guide you through the next steps.
             </p>
           </div>
 
@@ -62,7 +62,7 @@ export default function ThankYouPage() {
       {/* Footer */}
       <footer className="bg-white border-t py-8 text-center text-xs text-muted-foreground w-full">
         <div className="container mx-auto px-4 max-w-7xl">
-          <p>© {new Date().getFullYear()} International School of Design (INSD) Delhi. All Rights Reserved.</p>
+          <p>© {new Date().getFullYear()} AD Vantage Integrated Marketing All Rights Reserved.</p>
         </div>
       </footer>
     </div>

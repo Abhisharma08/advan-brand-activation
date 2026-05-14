@@ -17,8 +17,8 @@ const belleza = Belleza({
 });
 
 export const metadata: Metadata = {
-  title: 'INSD | Premier interior Design Course in Delhi',
-  description: 'Turn your creativity into a career with INSD Delhi\'s interior Design programs. Industry-oriented curriculum with 100% placement support.',
+  title: 'Innovative Branding Ideas | AD Vantage Integrated Marketing',
+  description: 'AD Vantage helping businesses to connect with customers in a meaningful way by being technology-enabled, data-driven, and creative marketing techniques.',
 };
 
 export default function RootLayout({
