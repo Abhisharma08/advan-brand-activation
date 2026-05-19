@@ -24,6 +24,7 @@ type LeadFormProps = {
   subtitle?: string
   buttonText?: string
   bottomText?: React.ReactNode
+  buttonclassName?: string
 }
 
 const defaultValues: FormValues = {
@@ -62,6 +63,7 @@ export default function LeadForm({
   title = "Plan Your Activation",
   subtitle = "Let’s Build Your Activation Campaign.",
   buttonText = "Get My Free Plan →",
+  buttonclassName ="",
   bottomText = "Free plan delivered in 24 hours · No commitment · WhatsApp or email — your choice",
 }: LeadFormProps) {
   const [values, setValues] = useState<FormValues>(defaultValues)
@@ -132,7 +134,7 @@ export default function LeadForm({
     <div
       className={`rounded-xl border border-muted bg-white p-6 shadow-2xl md:p-8 ${className}`}
     >
-      <h3 className="mb-2 text-2xl font-headline text-primary">
+      <h3 className="mb-2 text-4xl font-headline font-bold text-secondary">
         {title}
       </h3>
 
@@ -266,7 +268,7 @@ export default function LeadForm({
 
         <Button
           type="submit"
-          className="h-14 w-full bg-secondary text-lg font-bold text-white hover:bg-secondary/90"
+          className={`h-14 w-full bg-secondary text-lg font-bold text-white hover:bg-secondary/90 ${buttonclassName}`}
           disabled={isSubmitting}
         >
           {isSubmitting ? (

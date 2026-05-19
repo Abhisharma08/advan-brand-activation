@@ -91,8 +91,8 @@ export default function LandingPage() {
           <div className="container relative z-10 mx-auto max-w-7xl px-4">
             <div className="grid w-full grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12">
               <div className="w-full space-y-6 text-white">
-                <h1 className="font-headline text-3xl leading-tight text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.45)] md:text-3xl">
-                  Bangalore Sees Your Brand. Not Just Your Ad.
+                <h1 className="font-headline text-4xl leading-tight text-secondary font-bold drop-shadow-[0_4px_16px_rgba(0,0,0,0.45)] md:text-5xl">
+                  Bangalore Sees Your Brand. <br /> Not Just Your Ad.
                 </h1>
 
                 <p className="max-w-xl text-xl text-white">
@@ -137,29 +137,29 @@ export default function LandingPage() {
                 <div className="grid grid-cols-2 divide-x divide-y divide-white/10 md:grid-cols-4 md:divide-y-0">
 
                   <div className="flex flex-col items-center justify-center px-4 py-4 text-center">
-                    <span className="text-xl font-bold text-white">500+</span>
-                    <span className="text-sm font-medium text-secondary">
+                    <span className="text-xl font-bold text-secondary">500+</span>
+                    <span className="text-sm font-medium text-white/80">
                       Activations
                     </span>
                   </div>
 
                   <div className="flex flex-col items-center justify-center px-4 py-4 text-center">
-                    <span className="text-xl font-bold text-white">80+</span>
-                    <span className="text-sm font-medium text-secondary">
+                    <span className="text-xl font-bold text-secondary">80+</span>
+                    <span className="text-sm font-medium text-white/80">
                       Brands
                     </span>
                   </div>
 
                   <div className="flex flex-col items-center justify-center px-4 py-4 text-center">
-                    <span className="text-xl font-bold text-white">48 Hr</span>
-                    <span className="text-sm font-medium text-secondary">
+                    <span className="text-xl font-bold text-secondary">48 Hr</span>
+                    <span className="text-sm font-medium text-white/80">
                       Plan Turnaround
                     </span>
                   </div>
 
                   <div className="flex flex-col items-center justify-center px-4 py-4 text-center">
-                    <span className="text-xl font-bold text-white">Zero</span>
-                    <span className="text-sm font-medium text-secondary">
+                    <span className="text-xl font-bold text-secondary">Zero</span>
+                    <span className="text-sm font-medium text-white/80">
                       Subcontracting
                     </span>
                   </div>
@@ -187,11 +187,19 @@ export default function LandingPage() {
           >
             <div className="container mx-auto max-w-7xl px-4 text-center">
               
-              <h2 className="mb-3 text-3xl font-bold text-primary">
-                BRANDS ACTIVATED ACROSS BANGALORE
-              </h2>
+            <div className="flex flex-col items-center">
+            <h2 className="mb-3 text-4xl font-bold text-primary">
+              BRANDS ACTIVATED ACROSS BANGALORE
+            </h2>
 
-              <p className="mx-auto mb-10 max-w-2xl text-muted-foreground">
+            <div className="h-1 w-72 rounded-full bg-secondary" />
+          </div>
+
+              {/* <h2 className="mb-3 text-4xl font-bold text-primary">
+                BRANDS ACTIVATED ACROSS BANGALORE
+              </h2> */}
+
+              <p className="mx-auto my-5 mb-10 max-w-2xl text-muted-foreground">
                 500+ on-ground activations. 80+ brands. FMCG · D2C · Real Estate · Retail · EdTech
               </p>
 
@@ -235,7 +243,7 @@ export default function LandingPage() {
                     </div>
                   ))}
                 </div>
-                <p className="mt-4 text-xs text-muted-foreground">
+                <p className="mt-4 text-xs italic font-medium tracking-wide text-muted-foreground">
                   Join 80+ brands that chose on-ground over online
                 </p>
               </div>
@@ -266,13 +274,14 @@ export default function LandingPage() {
         <SectionHeader
           title="Your Ad Got the Click. Did They Actually Buy?"
           subtitle={
-            <>
-          Digital ads build awareness. On-ground activations build buyers.
-           We put your brand - physically - in the hands of your exact consumer. Mall floors. Society gates. Campus grounds. Tech park corridors.
-            </>
+          <></>
           }
           centered={false}
         />
+        <p className=" text-lg leading-relaxed italic text-slate-900">
+          Digital ads build awareness. On-ground activations build buyers.
+           We put your brand - physically - in the hands of your exact consumer. Mall floors. Society gates. Campus grounds. Tech park corridors.
+        </p>
         <p className="mt-2 text-lg leading-relaxed text-primary">
           Executed on-ground. Measured every day. Reported after every campaign.
         </p>
@@ -324,7 +333,7 @@ export default function LandingPage() {
 
       <div className="space-y-4">
 
-      <p className="text-lg leading-relaxed text-muted-foreground">
+      <p className="text-lg leading-relaxed italic text-slate-900">
         While your competitor runs digital ads, your consumer is walking through Forum Mall, past an RWA
 gate in HSR, or through a tech park in Whitefield. On-ground activations meet buyers where they
 already are - in the moment before they decide.
@@ -348,7 +357,7 @@ already are - in the moment before they decide.
       </ul>
             <div className="space-y-4">
 
-      <p className="text-lg leading-relaxed text-muted-foreground">
+      <p className="text-lg leading-relaxed italic text-slate-900">
         The right activation doesn't just build a brand. It builds the consumer who chooses your brand first
       </p>
       </div>
@@ -378,10 +387,12 @@ already are - in the moment before they decide.
           <div className="container mx-auto max-w-7xl px-5">
             <SectionHeader
               title="Six Formats. One City. Your Consumer, Up Close."
-              subtitle="From Phoenix Marketcity to Whitefield tech parks — we activate where Bangalore's buyers already move."
+              subtitle=""
             />
-
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <p className="text-center text-lg leading-relaxed italic text-slate-900 mb-10">
+                From Phoenix Marketcity to Whitefield tech parks — we activate where Bangalore's buyers already move.
+              </p>
+            <div className=" grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {[
               {
                 icon: <Building2 />,
@@ -429,17 +440,13 @@ already are - in the moment before they decide.
                   </div>
 
                   <div className="space-y-2">
-                    <h4 className="font-headline text-lg text-primary">
+                    <h4 className="font-headline text-lg text-secondary font-bold">
                       {item.title}
                     </h4>
 
-                      <p className="text-sm font-semibold text-secondary">
+                      <p className="text-sm font-semibold text-primary">
                         {item.Subtitles}
                       </p>
-
-                    <p className="text-sm leading-relaxed text-muted-foreground">
-                      {item.desc}
-                    </p>
                   </div>
                 </div>
               ))}
@@ -449,26 +456,31 @@ already are - in the moment before they decide.
 
 {/* PACKAGES */}
 <section
-  className="w-full bg-primary py-24 text-white"
+  className="w-full bg-primary/95 py-24 text-white"
   style={deferredSectionStyle}
 >
   <div className="container mx-auto max-w-7xl px-4">
-    <SectionHeader
-      title="Pick Your Format. We Handle the Rest."
-      subtitle={
-        <>
-          Four formats. Each built for one thing: {" "}
-          <span className="font-semibold text-secondary">
-          your consumer
-          </span>
-          ,{" "}
-          <span className="font-semibold text-secondary">
-          face to face with your brand
-          </span>,{" "}
-        </>
-      }
-      light
-    />
+<SectionHeader
+  title={
+    <span className="text-white">
+      Pick Your Format. We Handle the Rest.
+    </span>
+  }
+  subtitle={
+    <>
+      Four formats. Each built for one thing:{" "}
+      <span className="font-semibold text-secondary">
+        your consumer
+      </span>
+      ,{" "}
+      <span className="font-semibold text-secondary">
+        face to face with your brand
+      </span>
+      .
+    </>
+  }
+  light
+/>
 
     <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-4 xl:grid-cols-4f">
 
@@ -604,68 +616,37 @@ already are - in the moment before they decide.
               subtitle=""
               centered={false}
             />
-                          {/* TRUST BADGES
-              <div className="mt-6 overflow-hidden rounded-xl border border-white/10 bg-primary/90 shadow-xl backdrop-blur-sm">
-                <div className="grid grid-cols-2 divide-x divide-y divide-white/10 md:grid-cols-4 md:divide-y-0">
+        <ul className="space-y-4">
+          {[
+            <span className="text-slate-600">
+            <span className="font-semibold text-secondary">1,200+ </span>
+            direct face-to-face consumer contacts per mall activation day - documented contacts, not estimated reach
+            </span>,
 
-                  <div className="flex flex-col items-center justify-center px-4 py-4 text-center">
-                    <span className="text-xl font-bold text-white">1200+</span>
-                    <span className="text-sm font-medium text-secondary">
-                      Face-to-face consumer contacts per mall day
-                    </span>
-                  </div>
-
-                  <div className="flex flex-col items-center justify-center px-4 py-4 text-center">
-                    <span className="text-xl font-bold text-white">38%</span>
-                    <span className="text-sm font-medium text-secondary">
-                      Avg brand recall uplift post-activation
-                    </span>
-                  </div>
-
-                  <div className="flex flex-col items-center justify-center px-4 py-4 text-center">
-                    <span className="text-xl font-bold text-white">450</span>
-                    <span className="text-sm font-medium text-secondary">
-                      Student touchpoints per campus day
-                    </span>
-                  </div>
-
-                  <div className="flex flex-col items-center justify-center px-4 py-4 text-center">
-                    <span className="text-xl font-bold text-white">100%</span>
-                    <span className="text-sm font-medium text-secondary">
-                      Campaigns tracked & reported on time
-                    </span>
-                  </div>
-                </div>
-              </div> */}
-
-            <ul className="list-inside list-disc space-y-2 text-lg text-muted-foreground marker:text-secondary">
-              <li>
-                <span className="text-slate-600">
-                  <span className="font-semibold text-secondary">1,200+ </span>direct face-to-face consumer contacts per mall activation day - documented contacts, 
-                  not estimated reach
-                </span>
-              </li>
-
-              <li>
-                <span className="text-slate-600">
+            <span className="text-slate-600">
                   <span className="font-semibold text-secondary">38% </span>average rise in unaided brand recall vs. pre-campaign consumer survey, 
                   across tracked Bangalore activations
-                </span>
-              </li>
+                </span>,
 
-              <li>
+            <span className="text-slate-600">
+                  <span className="font-semibold text-secondary"> 200-400 </span>
+                  direct student touchpoints per campus activation day - every interaction logged, not estimated
+                </span>,
                 <span className="text-slate-600">
-                  <span className="font-semibold text-secondary"> 200-400 </span>direct student touchpoints per campus activation day - every interaction logged,
-                   not estimated
-                </span>
-              </li>
-              <li>
-                <span className="text-slate-600">
-                  <span className="font-semibold text-secondary">100% </span>of campaigns delivered with a location-specific, date-stamped report - 
+                  <span className="font-semibold text-secondary">100% </span>
+                  of campaigns delivered with a location-specific, date-stamped report - 
                   every consumer contact documented
-                </span>
-              </li>
-            </ul>
+                </span>,
+          ].map((item) => (
+            <li
+              key={item}
+              className="flex items-center gap-3 font-medium text-primary"
+            >
+              <ShieldCheck className="h-6 w-6 text-secondary" />
+              {item}
+            </li>
+          ))}
+        </ul>
           </div>
 
             </div>
@@ -677,25 +658,24 @@ already are - in the moment before they decide.
           className="relative w-full overflow-hidden bg-white py-24"
           style={deferredSectionStyle}
         >
+          <SectionHeader
+            title={
+              <>
+                3 Q3 Slots Left. First Brief Gets the Best Locations.  
+              </>
+            }
+            subtitle=""
+            centered
+          />
           <div className="container relative z-10 mx-auto max-w-7xl space-y-8 px-4 text-center">
-            <h2 className="font-headline text-4xl text-primary md:text-3xl">
-              3 Q3 Slots Left. First Brief Gets the Best Locations.
-            </h2>
 
-            <p>
-              We cap new campaign onboarding each quarter to protect execution quality. <br />
-              3 of 5 Q3 2026Bangalore slots are confirmed. <br />
+            <p className="mx-auto max-w-2xl text-lg italic leading-relaxed text-slate-900">
+              We cap new campaign onboarding each quarter to protect execution quality.
+              3 of 5 Q3 2026Bangalore slots are confirmed.
               Share your brief - we respond with slot availability and a custom strategy in 24 hours.
             </p>
 
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-              {/* <ScrollToLeadButton
-                variant="outline"
-                size="lg"
-                className="h-14 w-full border-primary px-10 text-lg text-primary hover:bg-primary/5 sm:w-auto"
-              >
-                Learn More
-              </ScrollToLeadButton> */}
 
               <ScrollToLeadButton
                 size="lg"
@@ -712,7 +692,7 @@ already are - in the moment before they decide.
                 Enquire Now
               </ScrollToLeadButton> */}
             </div>
-              <p className="text-xs text-muted-foreground">
+              <p className="text-xs text-muted-foreground italic text-slate-600">
               WhatsApp or form - takes 90 seconds. We respond the same day.
               </p>
             {/* <p className="text-sm text-muted-foreground">
@@ -732,18 +712,19 @@ already are - in the moment before they decide.
             <div className="mx-auto max-w-4xl">
               <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
                 <div className="space-y-6">
-                  <h2 className="font-headline text-3xl text-primary">
+                  <h2 className="font-headline text-4xl text-primary mb-2 font-headline font-bold">
                     Your Consumer Is Outside. Is Your Brand?
                   </h2>
 
                   <p className="text-lg text-muted-foreground">
                     Share your brief. Get a free activation plan - 
-                    format, Bangalore locations, reach estimate, and budget guide. 
-                    <br /> <span className="font-bold text-secondary">In 24 hours. At zero cost.</span>
+                    format, Bangalore locations, reach estimate, and budget guide.  </p>
+                    <p>
+                    <br></br><span className="font-bold text-secondary text-2xl">In 24 hours. At zero cost.</span>
                   </p>
                                 <ScrollToLeadButton
                 size="lg"
-                className="h-14 w-full bg-secondary px-10 text-lg font-bold text-white hover:bg-secondary/90 sm:w-auto"
+                className="h-14 w-full bg-secondary px-10 text-lg font-bold text-white hover:bg-secondary/90 sm:w-auto italic "
               >
               Get My Free Activation Plan →
               </ScrollToLeadButton>
@@ -753,10 +734,9 @@ already are - in the moment before they decide.
               title="Free Plan. 24 Hours."
               subtitle="Share your brief and get a custom activation strategy within 24 hours."
               buttonText="Send Brief — Get My Plan →"
+              buttonclassName="italic tracking-wide"
               bottomText={ <>
                 Free custom plan in 24 working hours.
-                <br /> Your details stay private. No spam.
-                <br /> No sales pitch - just actionable ideas.
               </> }
             /> 
               </div>
@@ -774,7 +754,7 @@ already are - in the moment before they decide.
       <div className="fixed bottom-0 left-0 right-0 z-30 flex w-screen gap-2 border-t bg-white p-4 shadow-[0_-4px_10px_rgba(0,0,0,0.1)] lg:hidden">
         <div className="mx-auto flex w-full max-w-7xl gap-2 px-4">
           <ScrollToLeadButton className="h-12 flex-1 bg-secondary font-bold text-white">
-            BOOK A FREE CONSULTATION
+            Get My Free Activation Plan →
           </ScrollToLeadButton>
           
         </div>
