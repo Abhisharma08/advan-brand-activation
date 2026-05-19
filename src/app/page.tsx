@@ -95,7 +95,7 @@ export default function LandingPage() {
                   Bangalore Sees Your Brand. <br /> Not Just Your Ad.
                 </h1>
 
-                <p className="max-w-xl text-xl text-white">
+                <p className="max-w-xl text-lg text-white">
                 On-ground brand activations across Koramangala, Whitefield, HSR, Indiranagar and Hebbal. <br />
                 1,200+ direct consumer contacts. Every campaign. Every time.
                 </p>
@@ -199,7 +199,7 @@ export default function LandingPage() {
                 BRANDS ACTIVATED ACROSS BANGALORE
               </h2> */}
 
-              <p className="mx-auto my-5 mb-10 max-w-2xl text-muted-foreground">
+              <p className="mx-auto my-5 mb-10 max-w-2xl text-muted-foreground italic">
                 500+ on-ground activations. 80+ brands. FMCG · D2C · Real Estate · Retail · EdTech
               </p>
 
@@ -368,7 +368,7 @@ already are - in the moment before they decide.
       {/* IMAGE */}
       <div className="order-2 relative h-[400px] overflow-hidden rounded-2xl shadow-2xl lg:order-2">
         <Image
-          src="https://res.cloudinary.com/dw9v7jjrq/image/upload/v1778844599/WhatsApp_Image_2026-05-15_at_4.48.21_PM_zp8l0l.jpg"
+          src="https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779184329/WhatsApp_Image_2026-05-19_at_12.13.36_PM_uerxy5.jpg"
           alt="Retail branding showcase"
           fill
           className="object-cover"
@@ -601,7 +601,7 @@ already are - in the moment before they decide.
           {/* IMAGE */}
           <div className="order-2 relative h-96 overflow-hidden rounded-2xl shadow-2xl lg:order-1">
             <Image
-              src="https://res.cloudinary.com/dw9v7jjrq/image/upload/v1778844598/WhatsApp_Image_2026-05-15_at_4.48.34_PM_fwdsic.jpg"
+              src="https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779184328/WhatsApp_Image_2026-05-19_at_12.33.03_PM_hy7r7j.jpg"
               alt="Retail Growth"
               fill
               className="object-cover"
@@ -667,13 +667,15 @@ already are - in the moment before they decide.
             subtitle=""
             centered
           />
-          <div className="container relative z-10 mx-auto max-w-7xl space-y-8 px-4 text-center">
+            <div className="container relative z-10 mx-auto max-w-7xl space-y-8 px-4 text-center">
 
-            <p className="mx-auto max-w-2xl text-lg italic leading-relaxed text-slate-900">
-              We cap new campaign onboarding each quarter to protect execution quality.
-              3 of 5 Q3 2026Bangalore slots are confirmed.
-              Share your brief - we respond with slot availability and a custom strategy in 24 hours.
-            </p>
+              <p className="mx-auto max-w-3xl text-base italic leading-loose text-slate-900 md:text-lg">
+                We cap new campaign onboarding each quarter to protect execution quality.
+                <br />
+                3 of 5 Q3 2026 Bangalore slots are confirmed.
+                <br />
+                Share your brief — we respond with slot availability and a custom strategy in 24 hours.
+              </p>
 
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
 
@@ -720,9 +722,9 @@ already are - in the moment before they decide.
                     Share your brief. Get a free activation plan - 
                     format, Bangalore locations, reach estimate, and budget guide.  </p>
                     <p>
-                    <br></br><span className="font-bold text-secondary text-2xl">In 24 hours. At zero cost.</span>
+                    <br></br><span className="font-bold text-secondary text-xl">In 24 hours. At zero cost.</span>
                   </p>
-                                <ScrollToLeadButton
+                  <ScrollToLeadButton
                 size="lg"
                 className="h-14 w-full bg-secondary px-10 text-lg font-bold text-white hover:bg-secondary/90 sm:w-auto italic "
               >
