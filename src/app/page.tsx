@@ -368,7 +368,7 @@ already are - in the moment before they decide.
       {/* IMAGE */}
       <div className="order-2 relative h-[400px] overflow-hidden rounded-2xl shadow-2xl lg:order-2">
         <Image
-          src="https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779184329/WhatsApp_Image_2026-05-19_at_12.13.36_PM_uerxy5.jpg"
+          src="https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779191307/WhatsApp_Image_2026-05-19_at_4.06.07_PM_jgbdik.jpg"
           alt="Retail branding showcase"
           fill
           className="object-cover"
@@ -601,7 +601,7 @@ already are - in the moment before they decide.
           {/* IMAGE */}
           <div className="order-2 relative h-96 overflow-hidden rounded-2xl shadow-2xl lg:order-1">
             <Image
-              src="https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779184328/WhatsApp_Image_2026-05-19_at_12.33.03_PM_hy7r7j.jpg"
+              src="https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779191306/WhatsApp_Image_2026-05-19_at_4.00.44_PM_sgbtnk.jpg"
               alt="Retail Growth"
               fill
               className="object-cover"
