@@ -601,7 +601,7 @@ already are - in the moment before they decide.
           {/* IMAGE */}
           <div className="order-2 relative h-96 overflow-hidden rounded-2xl shadow-2xl lg:order-1">
             <Image
-              src="https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779191306/WhatsApp_Image_2026-05-19_at_4.00.44_PM_sgbtnk.jpg"
+              src="https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779252430/WhatsApp_Image_2026-05-20_at_10.10.54_AM_jnrzpe.jpg"
               alt="Retail Growth"
               fill
               className="object-cover"
