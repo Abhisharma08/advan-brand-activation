@@ -31,6 +31,21 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
         <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18160208246"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-gtag-config"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'AW-18160208246');`,
+          }}
+        />
+        <Script
           id="google-tag-manager"
           strategy="lazyOnload"
           dangerouslySetInnerHTML={{
